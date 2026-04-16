@@ -1,4 +1,9 @@
 import tkinter as tk
+from tkinter import messagebox
+
+
+def show_message() -> None:
+    messagebox.showinfo("Martin", "HelloWorld")
 
 
 def main() -> None:
@@ -6,7 +11,7 @@ def main() -> None:
     root.title("Martin")
     root.geometry("240x120")
 
-    button = tk.Button(root, text="Martin", font=("Arial", 16), width=10)
+    button = tk.Button(root, text="Martin", font=("Arial", 16), width=10, command=show_message)
     button.pack(expand=True)
 
     root.mainloop()
